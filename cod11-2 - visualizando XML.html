@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Visualização de um XML em uma tabela HTML</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- Carregando o XML -->
+    <XML src="books.xml" id="xmlLivros" async="FALSE"></XML>
+    
+    <!-- vinculando uma tabela à fonte de dados XML -->
+    <h2>Tabela que exibe todos os registros</h2>
+    <TABLE datasrc="#xmlLivros" border="1">
+      <THEAD>
+        <TH>Título</TH>
+        <TH>Subtítulo</TH>
+        <TH>Categoria</TH>
+        <TH>Autor</TH>
+        <TH>ISBN</TH>
+      </THEAD>
+      <TR align="left">
+        <TD><SPAN datafld="TITULO"></SPAN></TD>
+        <TD><SPAN datafld="SUBTITULO"></SPAN></TD>
+        <TD><SPAN datafld="CATEGORIA"></SPAN></TD>
+        <TD><SPAN datafld="AUTOR"></SPAN></TD>
+        <TD><SPAN datafld="ISBN"></SPAN></TD>
+      </TR>
+    </TABLE>
+    </body>
+</html>
